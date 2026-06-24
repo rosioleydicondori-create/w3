@@ -13,7 +13,29 @@
   cursor: none;
 }
 </style>
+<script>
+let escTimer = null;
+let escHeld = false;
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !escHeld) {
+        escHeld = true;
+
+        escTimer = setTimeout(() => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        }, 4000); // 4 seconds
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+        escHeld = false;
+        clearTimeout(escTimer);
+    }
+});
+</script>
 </head>
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
