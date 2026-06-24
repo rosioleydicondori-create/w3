@@ -26,12 +26,8 @@
   mozallowfullscreen 
   allow="fullscreen *; pointer-lock *; keyboard-map *; autoplay *; camera *; microphone *; display-capture *; encrypted-media *; picture-in-picture *; screen-wake-lock *" style="z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
 </iframe>
-<script>function enableFullscreen() {
-        const el = document.documentElement;
-        (el.requestFullscreen ||
-            el.webkitRequestFullscreen ||
-            el.mozRequestFullScreen ||
-            el.msRequestFullscreen)?.call(el);
-    }</script>
+<script>
+    document.body.style.overflow = "hidden";
+</script>
 </body>
 </html>
