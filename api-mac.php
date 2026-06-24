@@ -48,8 +48,5 @@ document.addEventListener('keyup', (e) => {
   mozallowfullscreen 
   allow="fullscreen *; pointer-lock *; keyboard-map *; autoplay *; camera *; microphone *; display-capture *; encrypted-media *; picture-in-picture *; screen-wake-lock *" style="z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
 </iframe>
-<script>
-    document.body.style.overflow = "hidden";
-</script>
 </body>
 </html>
